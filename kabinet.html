@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет - 2SHOP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="header-bottom">
+    <div class="logo">
+      <a href="http://localhost:51838/index.html?phcodeLivePreview=true">
+      <img src="logo.png" alt="Логотип">
+      </a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Поиск" />
+    </div>
+    <div class="right-block">
+      <nav class="main-menu">
+        <a href="#">Каталог</a>
+        <a href="#">О нас</a>
+        <a href="#">Оплата и доставка</a>
+    
+        <a href="#">Контакты</a>
+      </nav>
+      
+           <a href="http://localhost:51838/kabinet.html?phcodeLivePreview=true" class="account-button">
+        <img src="kabinet.png" alt="Кабинет" />
+        <span>Личный кабинет</span>
+      </a>
+       <a href="http://localhost:51838/korzina.html?phcodeLivePreview=true" class="account-button">
+        <img src="korzina.png" alt="Кабинет" />
+        <span>Корзина</span>
+      </a>
+     
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="profile-page">
+    <aside class="profile-sidebar">
+      <ul>
+        <li><a href="#">Заказы</a></li>
+        <li><a href="#">Избранное</a></li>
+       
+       
+       
+        
+        <li><a href="#" class="active">Настройки профиля</a></li>
+      </ul>
+    </aside>
+
+    <section class="profile-content">
+      <h2>Настройки профиля</h2>
+      <div class="profile-header">
+       <div class="avatar-wrapper">
+  <img src="avatar.png" alt="Аватар" id="avatarPreview">
+  <input type="file" id="avatarInput" accept="image/*" hidden>
+</div>
+        <div class="name-block">
+         <h3 id="profileName">Имя пользователя</h3>
+          <small>Дата регистрации: 11.03.2025</small>
+          <small>Адрес доставки: Не выбран </small>
+        </div>
+      </div>
+
+      <div class="profile-field">
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone"/>
+      </div>
+
+      <div class="profile-field">
+        <label for="email">Email:</label>
+        <input type="email" id="email"/>
+      </div>
+
+      <div class="profile-field">
+        <label for="nickname">Имя:</label>
+        <input type="text" id="nickname" />
+      </div>
+      <div class="profile-field">
+        <label for="nickname">Адрес:</label>
+        <input type="text" id="adress" />
+      </div>
+
+      <div class="profile-buttons">
+        <button class="save">Сохранить</button>
+        <button class="logout">Выйти</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+ <div class="footer-top">
+    <div class="footer-section">
+  <div class="footer-middle">
+    <div class="footer-contact">
+      <h4>КОНТАКТЫ</h4>
+      <p>+7 (705) 282-06-62</p>
+      <p>Пн-Пт 7:00–18:00</p>
+      <p>г.Астана, ул.Бейбитшилик 47/1</p>
+      <p>2shop@mail.ru</p>
+      
+    </div>
+
+    
+
+    <div class="footer-guarantee">
+      <h4>НАША ГАРАНТИЯ</h4>
+      <p>Недовольны своей покупкой?<br>Вы можете вернуть её в течение 30 дней с даты получения, согласно <a href="#">нашим правилам</a>.</p>
+     <div class="footer-social">
+       <a href="https://t.me/yataghan_kz"><img src=tg.png> </a>
+        <a href="https://www.instagram.com/2shop_kz/"><img src=instagram.png> </a>
+      <a href="https://kaspi.kz/shop/info/merchant/9199009/address-tab/?merchantId=9199009&productCode=108008604&baseProductCode=&tabId=PRODUCT"><img src=kaspi.png> </a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>НОВОСТНАЯ РАССЫЛКА</h4>
+      <p>Подпишитесь прямо сейчас!</p>
+     <form class="newsletter-form">
+  <input type="email" id="newsletter-email" placeholder="example@gmail.com" required />
+  <button id="newsletter-submit" type="submit" disabled>➤</button>
+</form>
+      <label>
+        <input type="checkbox" /> Я прочитал Условия соглашения и согласен с условиями
+      </label>
+      <div class=footer-logo>
+      <img src="logo.png">
+      </div>
+    </div>
+  </div>
+      </div>
+   </div>
+
+  
+</footer>
+<!-- Мобильное меню -->
+<button class="burger-btn" onclick="toggleMobileMenu()">☰</button>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="toggleMobileMenu()">×</button>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="catalog.html">Каталог</a></li>
+    <li><a href="onas.html">О нас</a></li>
+    <li><a href="oplata.html">Оплата и доставка</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="korzina.html">Корзина</a></li>
+  </ul>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>

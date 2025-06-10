@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог - 2SHOP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="header-bottom">
+    <div class="logo">
+      <a href="index.html">
+      <img src="logo.png" alt="Логотип">
+      </a>
+    </div>
+    <div class="right-block">
+      <nav class="main-menu">
+        <a href="catalog.html">Каталог</a>
+        <a href="onas.html">О нас</a>
+        <a href="oplata.html">Оплата и доставка</a>  
+        <a href="contacts.html">Контакты</a>
+        
+      </nav>
+      
+      
+      
+       <a href="korzina.html" class="account-button">
+        <img src="korzina.png" alt="Кабинет" />
+        <span>Корзина</span>
+      </a>
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <h1 class="catalog-title">Каталог товаров</h1>
+  <section class="catalog">
+    <div class="catalog-header">
+      <button class="filter-toggle" id="toggleFilters">Показать фильтры</button>
+      <div class="catalog-search">
+        <input type="text" id="searchInput" placeholder="Поиск по товарам..." />
+      </div>
+    </div>
+
+    
+
+    <div class="filter-panel" id="filterPanel" style="display: none;">
+    <div class="filter-group">
+  <label><strong>Цена</strong></label>
+  <div class="double-range">
+    <div class="range-wrapper">
+      <input type="range" id="minPrice" min="7600" max="279700" value="7600" oninput="updateRange()">
+      <input type="range" id="maxPrice" min="7600" max="279700" value="279700" oninput="updateRange()">
+    </div>
+    <div class="range-values">
+      <label>от 
+        <input type="number" id="priceMinInput" value="7600" min="7600" max="279700">
+      </label>
+      <label>до 
+        <input type="number" id="priceMaxInput" value="279700" min="7600" max="279700">
+      </label>
+    </div>
+  </div>
+</div>
+
+      <div class="filter-group">
+  <label>Тип устройства:</label>
+  <select id="deviceType">
+    <option value="">Все</option>
+  
+    <option value="Цилиндрическая камера">Цилиндрическая камера</option>
+    <option value="Купольная камера">Купольная камера</option>
+    <option value="Кубическая камера">Кубическая камера</option>
+    <option value="Позиционная камера">Позиционная камера</option>
+    <option value="Панорамная камера">Панорамная камера</option>
+    <option value="Видеорегистратор">Видеорегистратор</option>
+  </select>
+</div>
+
+      <div class="filter-group">
+        <label>Бренд</label>
+        <select id="brandFilter">
+          
+          <option value="">Все</option>
+          <option value="Hikvision">Hikvision</option>
+          <option value="HiWatch">HiWatch</option>
+          <option value="Ezviz">Ezviz</option>
+         
+        </select>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="apply">Применить</button>
+        <button class="reset" id="resetButton">Сбросить</button>
+      </div>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="product-card" data-name="DS-2CD1147G2H-LIU (2.8mm), IP Камера, купольная , Hikvision" data-type="Купольная камера" data-brand="Hikvision">
+       <a href="karto4ka.html">  <img src="tovar1.png" alt="Товар 1" /> 
+        <h3>DS-2CD1147G2H-LIU (2.8mm), IP Камера, купольная , Hikvision</h3> </a>
+        <p>Цена: 38 900 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-2CD1147G2H-LIU (2.8mm), IP Камера, купольная , Hikvision',
+    price: '38 900 тг',
+    image: 'tovar1.png'
+  })">🛒В корзину</button>
+      </div>
+      <div class="product-card" data-name="DS-2CD1T27G0-L(C) (4.0mm), IP Камера, цилиндрическая, Hikvision" data-type="Цилиндрическая камера" data-brand="Hikvision">
+       <a href="karto4ka2.html">  <img src="tovar2.png" alt="Товар 1" /> 
+        <h3>DS-2CD1T27G0-L(C) (4.0mm), IP Камера, цилиндрическая, Hikvision</h3> </a>
+        <p>Цена: 47 523 тг</p>
+         <button onclick="addToCart({
+    title: 'DS-2CD1T27G0-L(C) (4.0mm), IP Камера, цилиндрическая, Hikvision',
+    price: '47 523 тг',
+    image: 'tovar2.png'
+  })">🛒В корзину</button>
+      </div>
+       <div class="product-card" data-name="DS-2CD2423G2-I (2.8mm), IP Камера, кубическая, Hikvision" data-type="Кубическая камера" data-brand="Hikvision">
+        <a href="karto4ka3.html">  <img src="tovar3.png" alt="Товар 1" /> 
+        <h3>DS-2CD2423G2-I (2.8mm), IP Камера, кубическая, Hikvision</h3> </a>
+        <p>Цена: 57 528 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-2CD2423G2-I (2.8mm), IP Камера, кубическая, Hikvision',
+    price: '57 528 тг',
+    image: 'tovar3.png'
+  })">🛒В корзину</button>
+      </div>
+      <div class="product-card" data-name="DS-2DE2C400IWG/W(W) (2.8mm), WiFi IP PT Камера, позиционная, Hikvision" data-type="Позиционная камера" data-brand="Hikvision">
+         <a href="karto4ka4.html">  <img src="tovar4.png" alt="Товар 1" /> 
+        <h3>DS-2DE2C400IWG/W(W) (2.8mm), WiFi IP PT Камера, позиционная, Hikvision</h3> </a>
+        <p>Цена: 31 900 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-2DE2C400IWG/W(W) (2.8mm), WiFi IP PT Камера, позиционная, Hikvision',
+    price: '31 900 тг',
+    image: 'tovar4.png'
+  })">🛒В корзину</button>
+      </div>
+     <div class="product-card" data-name="DS-2CD2935FWD-IS (1.16mm), IP Камера, панорамная, Hikvision" data-type="Панорамная камера" data-brand="Hikvision">
+        <a href="karto4ka5.html">  <img src="tovar5.png" alt="Товар 1" /> 
+        <h3>DS-2CD2935FWD-IS (1.16mm), IP Камера, панорамная, Hikvision</h3> </a>
+        <p>Цена: 104 473 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-2CD2935FWD-IS (1.16mm), IP Камера, панорамная, Hikvision',
+    price: '104 473 тг',
+    image: 'tovar5.png'
+  })">🛒В корзину</button>
+      </div>
+    <div class="product-card" data-name="DS-7616NXI-K1(D), IP Видеорегистратор, Hikvision" data-type="Видеорегистратор" data-brand="Hikvision">
+         <a href="karto4ka6.html">  <img src="tovar6.png" alt="Товар 1" /> 
+        <h3>DS-7616NXI-K1(D), IP Видеорегистратор, Hikvision</h3></a>
+        <p>Цена: 55 900 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-7616NXI-K1(D), IP Видеорегистратор, Hikvision',
+    price: '55 900 тг',
+    image: 'tovar6.png'
+  })">🛒В корзину</button>
+      </div>
+      <div class="product-card" data-name="H5 POE 3MP, PoE Камера, цилиндрическая, Ezviz" data-type="Цилиндрическая камера" data-brand="Ezviz">
+        <a href="karto4ka7.html">  <img src="tovar7.png" alt="Товар 1" /> 
+        <h3>H5 POE 3MP, PoE Камера, цилиндрическая, Ezviz</h3></a>
+        <p>Цена: 28 900 тг</p>
+        <button onclick="addToCart({
+    title: 'H5 POE 3MP, PoE Камера, цилиндрическая, Ezviz',
+    price: '28 900 тг',
+    image: 'tovar7.png'
+  })">🛒В корзину</button>
+      </div>
+    <div class="product-card" data-name="DS-I203(E) (2.8mm), IP Камера, купольная , HiWatch" data-type="Купольная камера" data-brand="HiWatch">
+        <a href="karto4ka8.html">  <img src="tovar8.png" alt="Товар 1" /> 
+        <h3>DS-I203(E) (2.8mm), IP Камера, купольная , HiWatch</h3> </a>
+        <p>Цена: 19 900 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-I203(E) (2.8mm), IP Камера, купольная , HiWatch',
+    price: '19 900 тг',
+    image: 'tovar8.png'
+  })">🛒В корзину</button>
+      </div>
+     <div class="product-card" data-name="DS-I450L(D) (2.8mm), IP Камера, цилиндрическая, HiWatch" data-type="Цилиндрическая камера" data-brand="HiWatch">
+       <a href="karto4ka9.html">  <img src="tovar9.png" alt="Товар 1" /> 
+        <h3>DS-I450L(D) (2.8mm), IP Камера, цилиндрическая, HiWatch</h3></a>
+        <p>Цена: 38 900 тг</p>
+         <button onclick="addToCart({
+    title: 'DS-I450L(D) (2.8mm), IP Камера, цилиндрическая, HiWatch',
+    price: '38 900 тг',
+    image: 'tovar9.png'
+  })">🛒В корзину</button>
+      </div>
+   <div class="product-card" data-name="H8C PoE 3MP, PoE Камера, PT Позиционная, Ezviz" data-type="Позиционная камера" data-brand="Ezviz">
+         <a href="karto4ka10.html">  <img src="tovar10.png" alt="Товар 1" /> 
+        <h3>H8C PoE 3MP, PoE Камера, PT Позиционная, Ezviz</h3> </a>
+        <p>Цена: 31 500 тг</p>
+         <button onclick="addToCart({
+    title: 'H8C PoE 3MP, PoE Камера, PT Позиционная, Ezviz',
+    price: '31 500 тг',
+    image: 'tovar10.png'
+  })">🛒В корзину</button>
+      </div>
+    <div class="product-card" data-name="X5S 4W, Видеорегистратор, Ezviz" data-type="Видеорегистратор" data-brand="Ezviz">
+        <a href="karto4ka11.html">  <img src="tovar11.png" alt="Товар 1" /> 
+        <h3>X5S 4W, Видеорегистратор, Ezviz</h3> </a>
+        <p>Цена: 31 900 тг</p>
+         <button onclick="addToCart({
+    title: 'X5S 4W, Видеорегистратор, Ezviz',
+    price: '31 900 тг',
+    image: 'tovar11.png'
+  })">🛒В корзину</button>
+      </div>
+    <div class="product-card" data-name="DS-2CD2T46G2P-ISU/SL(C) (2.8mm), IP Камера, цилиндрическая, Hikvision" data-type="Цилиндрическая камера" data-brand="Hikvision">
+         <a href="karto4ka12.html">  <img src="tovar12.png" alt="Товар 1" /> 
+        <h3>DS-2CD2T46G2P-ISU/SL(C) (2.8mm), IP Камера, цилиндрическая, Hikvision</h3> </a>
+        <p>Цена: 110 630 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-2CD2T46G2P-ISU/SL(C) (2.8mm), IP Камера, цилиндрическая, Hikvision',
+    price: '110 630 тг',
+    image: 'tovar12.png'
+  })">🛒В корзину</button>
+      </div>
+    <div class="product-card" data-name="DS-2CD2347G2H-LIU(eF)(BLACK) (2.8mm), IP Камера, купольная , Hikvision" data-type="Купольная камера" data-brand="Hikvision">
+         <a href="karto4ka13.html">  <img src="tovar13.png" alt="Товар 1" /> 
+        <h3>DS-2CD2347G2H-LIU(eF)(BLACK) (2.8mm), IP Камера, купольная , Hikvision</h3> </a>
+        <p>Цена: 73 900 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-2CD2347G2H-LIU(eF)(BLACK) (2.8mm), IP Камера, купольная , Hikvision',
+    price: '73 900 тг',
+    image: 'tovar13.png'
+  })">🛒В корзину</button>
+      </div>
+   <div class="product-card" data-name="DS-T200(B) (2.8mm), TVI Камера, цилиндрическая, HiWatch" data-type="Цилиндрическая камера" data-brand="HiWatch">
+        <a href="karto4ka14.html">  <img src="tovar14.png" alt="Товар 1" /> 
+        <h3>DS-T200(B) (2.8mm), TVI Камера, цилиндрическая, HiWatch</h3> </a>
+     
+    
+        <p>Цена: 11 000 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-T200(B) (2.8mm), TVI Камера, цилиндрическая, HiWatch',
+    price: '11 000 тг',
+    image: 'tovar14.png'
+  })">🛒В корзину</button>
+      </div>
+    <div class="product-card" data-name="DS-I852M (2.8mm), IP Камера, купольная , HiWatch" data-type="Купольная камера" data-brand="HiWatch">
+        <a href="karto4ka15.html">  <img src="tovar15.png" alt="Товар 1" /> 
+        <h3>DS-I852M (2.8mm), IP Камера, купольная , HiWatch</h3> </a>
+        <p>Цена: 55 900 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-I852M (2.8mm), IP Камера, купольная , HiWatch',
+    price: '55 900 тг',
+    image: 'tovar15.png'
+  })">🛒В корзину</button>
+      </div>
+     <div class="product-card" data-name="DS-2CD2347G2P-LSU/SL(C) (2.8mm), IP Камера, купольная , Hikvision" data-type="Купольная камера" data-brand="Hikvision">
+        <a href="karto4ka16.html">  <img src="tovar16.png" alt="Товар 1" /> 
+        <h3>DS-2CD2347G2P-LSU/SL(C) (2.8mm), IP Камера, купольная , Hikvision</h3></a>
+        <p>Цена: 128 908 тг</p>
+        <button onclick="addToCart({
+    title: 'DS-2CD2347G2P-LSU/SL(C) (2.8mm), IP Камера, купольная , Hikvision',
+    price: '128 908 тг',
+    image: 'tovar16.png'
+  })">🛒В корзину</button>
+      </div>
+      
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+ <div class="footer-top">
+    <div class="footer-section">
+  <div class="footer-middle">
+    <div class="footer-contact">
+      <h4>КОНТАКТЫ</h4>
+      <p>+7 (705) 282-06-62</p>
+      <p>Пн-Пт 7:00–18:00</p>
+      <p>г.Астана, ул.Бейбитшилик 47/1</p>
+      <p>2shop@mail.ru</p>
+      
+    </div>
+
+    
+
+    <div class="footer-guarantee">
+      <h4>НАША ГАРАНТИЯ</h4>
+      <p>Недовольны своей покупкой?<br>Вы можете вернуть её в течение 30 дней с даты получения, согласно <a href="#">нашим правилам</a>.</p>
+     <div class="footer-social">
+       <a href="https://t.me/yataghan_kz"><img src=tg.png> </a>
+        <a href="https://www.instagram.com/2shop_kz/"><img src=instagram.png> </a>
+      <a href="https://kaspi.kz/shop/info/merchant/9199009/address-tab/?merchantId=9199009&productCode=108008604&baseProductCode=&tabId=PRODUCT"><img src=kaspi.png> </a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>НОВОСТНАЯ РАССЫЛКА</h4>
+      <p>Подпишитесь прямо сейчас!</p>
+    <form class="newsletter-form">
+  <input type="email" id="newsletter-email" placeholder="example@gmail.com" required />
+  <button id="newsletter-submit" type="submit" disabled>➤</button>
+</form>
+     <label>
+  <input type="checkbox" id="newsletter-agree" />
+  Я прочитал Условия соглашения и согласен с условиями
+</label>
+      <div class=footer-logo>
+      <img src="logo.png">
+      </div>
+    </div>
+  </div>
+      </div>
+   </div>
+
+  
+</footer>
+<!-- Мобильное меню -->
+<button class="burger-btn" onclick="toggleMobileMenu()">☰</button>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="toggleMobileMenu()">×</button>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="catalog.html">Каталог</a></li>
+    <li><a href="onas.html">О нас</a></li>
+    <li><a href="oplata.html">Оплата и доставка</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="korzina.html">Корзина</a></li>
+  </ul>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>

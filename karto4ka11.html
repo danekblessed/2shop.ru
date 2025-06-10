@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Карточка товара — 2SHOP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="header-bottom">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Логотип" />
+      </a>
+    </div>
+   <form class= "search-bar" id="searchForm" action="catalog.html" method="get">
+  <input type="text" name="query" placeholder="Поиск" />
+</form>
+    <div class="right-block">
+      <nav class="main-menu">
+        <a href="catalog.html">Каталог</a>
+        <a href="onas.html">О нас</a>
+        <a href="oplata.html">Оплата и доставка</a>
+
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="account">
+      <a href="korzina.html" class="account-button">
+          <img src="korzina.png" alt="Кабинет" />
+          <span>Корзина</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container-product-main">
+  <div class="product-detail">
+    <div class="product-image">
+      <img src="tovar11.png" alt="Товар" />
+    </div>
+    <div class="product-info">
+      <h2>X5S 4W, Видеорегистратор, Ezviz</h2>
+      <p class="product-price"> 31 900 тг</p>
+
+      <div class="cart-controls">
+    
+         <button class="kart-btn" onclick="addToCart({
+    title: 'X5S 4W, Видеорегистратор, Ezviz',
+    price: '31 900 тг',
+    image: 'tovar11.png'
+  })">🛒В корзину</button>
+      </div>
+
+      <p><strong>Наличие:</strong> Много</p>
+      <p><strong>Тип устройства:</strong> Видеорегистратор</p> 
+       <p><strong>Разрешение записи:</strong> 3 К/2 К+/2 К/1080 р  </p>  
+    </div>
+  </div>
+
+  <div class="product-description">
+    <h3>Описание</h3>
+    <p>
+   Модель: CS-X5S-R100-4W | Видеорегистратор | Разрешение записи: 3 К/2 К+/2 К/1080 р | Воспроизведение: 4×3К | Битрейт: 50 Мбит/с |
+        Кодек: H.265/H.264 | Интерфейс: Ethernet 1×RJ45 10M/100Mbps / Wi-Fi 2.4GHz IEEE802.11b/g/n до 100м. / 1×HDMI / 1×VGA FullHD / 2×USB 2.0 | Носители: 1×SATA HDD 8Тб (нет в комплекте) |
+        Доступ и управление с мобильных устройств | Простое, интуитивно понятное подключение и использование | 
+        Функции: Запись по событию или движению в кадре | Управление: Мышь | Протокол: Hikvision/ONVIF 2.5 | Цвет: Черный |
+        Питание: DC 12V 1.5A 8W (БП в комплекте) | Вес: 0.9кг | Размер: 235×270×44.5мм<br>
+    
+      
+    </p>
+  </div>
+</main>
+<footer class="footer">
+ <div class="footer-top">
+    <div class="footer-section">
+  <div class="footer-middle">
+    <div class="footer-contact">
+      <h4>КОНТАКТЫ</h4>
+      <p>+7 (705) 282-06-62</p>
+      <p>Пн-Пт 7:00–18:00</p>
+      <p>г.Астана, ул.Бейбитшилик 47/1</p>
+      <p>2shop@mail.ru</p>
+      
+    </div>
+
+    
+
+    <div class="footer-guarantee">
+      <h4>НАША ГАРАНТИЯ</h4>
+      <p>Недовольны своей покупкой?<br>Вы можете вернуть её в течение 30 дней с даты получения, согласно <a href="#">нашим правилам</a>.</p>
+     <div class="footer-social">
+       <a href="https://t.me/yataghan_kz"><img src=tg.png> </a>
+        <a href="https://www.instagram.com/2shop_kz/"><img src=instagram.png> </a>
+      <a href="https://kaspi.kz/shop/info/merchant/9199009/address-tab/?merchantId=9199009&productCode=108008604&baseProductCode=&tabId=PRODUCT"><img src=kaspi.png> </a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>НОВОСТНАЯ РАССЫЛКА</h4>
+      <p>Подпишитесь прямо сейчас!</p>
+        <form class="newsletter-form">
+  <input type="email" id="newsletter-email" placeholder="example@gmail.com" required />
+  <button id="newsletter-submit" type="submit" disabled>➤</button>
+</form>
+     <label>
+  <input type="checkbox" id="newsletter-agree" />
+  Я прочитал Условия соглашения и согласен с условиями
+</label>
+      <div class=footer-logo>
+      <img src="logo.png">
+      </div>
+    </div>
+  </div>
+      </div>
+   </div>
+
+  
+</footer>
+ <!-- Мобильное меню -->
+<button class="burger-btn" onclick="toggleMobileMenu()">☰</button>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="toggleMobileMenu()">×</button>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="catalog.html">Каталог</a></li>
+    <li><a href="onas.html">О нас</a></li>
+    <li><a href="oplata.html">Оплата и доставка</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="korzina.html">Корзина</a></li>
+  </ul>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>
